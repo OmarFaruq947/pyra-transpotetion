@@ -1,0 +1,26 @@
+
+.details{
+    width: 300px;
+    height: 260px;
+    background-color: lightgray;
+    margin-left: 24px;
+    margin-top: 38px;
+}
+.innerDiv{
+    margin-top: 40px;
+}
+.text_area{
+    border: none;
+    width: 90%;
+    margin-left: 15px;
+}
+.text{
+    margin-left: 15px;
+}
+.search_btn{
+    border: none;
+    background-color: tomato;
+    text-align: center;
+    width: 100%;
+    color: lightgray;
+}

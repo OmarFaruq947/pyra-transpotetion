@@ -1,0 +1,30 @@
+.logIn_box_two{
+    border: 1px solid rgb(221, 221, 221);
+    width: 500px;
+    height: 290px;
+    margin: 1% auto;
+}
+.login_box_inner_two{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.createAcountBtn_two{
+    background-color: tomato;
+    padding:5px 208px;
+    border: none;
+    color: white;
+   
+}
+.alraedy_text_two,.OR_two{
+    text-align: center;
+}
+.login_text_two{
+    text-decoration:underline;
+    color: tomato;
+}
+
+.google_github_login_two{
+margin-left: 32%;
+margin-right: 32%;
+}

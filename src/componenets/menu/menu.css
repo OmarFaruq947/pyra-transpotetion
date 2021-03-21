@@ -1,0 +1,22 @@
+.menu_text{
+    color: black;
+    font-size: 20px;
+}
+.menu_text:hover{
+    color:tomato;
+}
+
+.logIn_button{
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+.logIn_button:hover{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}

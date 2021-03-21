@@ -1,0 +1,13 @@
+.Home_body_bg{
+    background-image: url('../../image/Bg.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.Home-_body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+

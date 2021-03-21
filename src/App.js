@@ -1,23 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { createContext, useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "firebase/auth";
+import firebase from "firebase/app";
+import Home from "./componenets/Home/Home";
+import Blog from "./componenets/Blog/Blog";
+import Contact from "./componenets/Contact/Contact";
+import LogIn from "./componenets/Login/LogIn";
+import Destination from "./componenets/Destination/Destination";
+import PrivateRoute from "./componenets/PriveteRoute/PrivateRoute";
+import LoginTow from "./componenets/LoginTow/LoginTow";
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+
+      {/* cheack purpose use kora hoyce */}
+        {/* <p>Name: {loggedInUser.name}</p> */}
+
+
+        <Router>
+          <Switch>
+            <Route path="/Home">
+              <Home />
+            </Route>
+
+            <Route exact path="/">
+              <Home />
+            </Route>
+
+            <PrivateRoute path="/Destination/:id">
+              <Destination />
+            </PrivateRoute>
+
+            <Route path="/Destination">
+            <LogIn />
+            </Route>
+
+            <Route path="/Contact">
+              <Contact/>
+            </Route>
+
+            <Route path="/Blog">
+              <Blog />
+            </Route>
+
+            <Route path="/LogIn">
+              <LogIn />
+            </Route>
+
+            <Route path="/LoginTwo">
+              <LoginTow />
+            </Route>
+          </Switch>
+        </Router>
+      </UserContext.Provider>
     </div>
   );
 }

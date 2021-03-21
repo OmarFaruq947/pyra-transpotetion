@@ -1,0 +1,29 @@
+.logIn_box{
+    border: 1px solid rgb(221, 221, 221);
+    width: 500px;
+    height: 516px;
+    margin: 1% auto;
+}
+.login_box_inner{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.createAcountBtn{
+    background-color: tomato;
+    padding:5px 169px;
+    border: none;
+    color: white;
+   
+}
+.alraedy_text,.OR{
+    text-align: center;
+}
+.login_text{
+    text-decoration:underline;
+    color: tomato;
+}
+.requarment_login{
+    font-size: 15px;
+    color: rgb(204, 204, 204);
+}
