@@ -28,3 +28,18 @@
 margin-left: 32%;
 margin-right: 32%;
 }
+
+@media screen and (max-width:720px){
+    .logIn_box_two{
+        width: 400px;
+        margin: 5% auto;
+    }
+    .createAcountBtn_two{
+        padding:5px 160px;
+    }
+
+    .google_github_login_two{
+        margin-left: 23%;
+        margin-right: 23%;
+        }
+}

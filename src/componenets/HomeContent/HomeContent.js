@@ -7,10 +7,9 @@ const HomeContent = (props) => {
     const {flag , title,id} =props.trns;
     const history= useHistory()
 
-    // const handleOrderNowBtn =() => {
-    //     history.push('/LogIn');
-    // }
-
+    const handleOrderNowBtn =() => {
+        history.push('/LogIn');
+    }
 
     return (
         <div className="card_div">

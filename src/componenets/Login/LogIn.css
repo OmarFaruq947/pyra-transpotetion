@@ -13,8 +13,7 @@
     background-color: tomato;
     padding:5px 169px;
     border: none;
-    color: white;
-   
+    color: white; 
 }
 .alraedy_text,.OR{
     text-align: center;
@@ -26,4 +25,16 @@
 .requarment_login{
     font-size: 15px;
     color: rgb(204, 204, 204);
+}
+
+@media screen and (max-width:720px){
+    .logIn_box{
+        width: 400px;
+        height: 516px;
+        margin: 15% auto;
+    }
+    .createAcountBtn{
+        padding:5px 150px;
+        font-size: 10px;
+    }
 }

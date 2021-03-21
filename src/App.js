@@ -11,20 +11,16 @@ import LogIn from "./componenets/Login/LogIn";
 import Destination from "./componenets/Destination/Destination";
 import PrivateRoute from "./componenets/PriveteRoute/PrivateRoute";
 import LoginTow from "./componenets/LoginTow/LoginTow";
+import { Badge } from "react-bootstrap";
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  
   return (
     <div className="App">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-
-      {/* cheack purpose use kora hoyce */}
-        {/* <p>Name: {loggedInUser.name}</p> */}
-
-
+        <Badge pill variant="primary" className="userName">Name: {loggedInUser.name}</Badge>
         <Router>
           <Switch>
             <Route path="/Home">

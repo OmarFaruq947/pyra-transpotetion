@@ -1,8 +1,6 @@
 .img_siz{
     width: 120px;
     margin:0 auto;
-    
-    
 }
 .card{
 border-radius: 10px;
@@ -10,4 +8,16 @@ border-radius: 10px;
 .card_div{
 margin: 50% auto;
 
+}
+
+@media screen and (max-width:720px){
+    .card_div{
+        margin: 5% auto;
+        
+        }
+    .img_siz{
+    width: 110px;
+    margin:0 auto;
+    }
+   
 }

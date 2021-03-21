@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Destination.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Menu from "../menu/menu";
@@ -13,9 +13,7 @@ import {
 import App from "../../App";
 import googleMap from "../../image/Map.png";
 
-const Destination = (props) => {
-//   const { email} = props.allUser;
-
+const Destination = () => {
   return (
     <div>
       <Menu></Menu>
@@ -28,11 +26,12 @@ const Destination = (props) => {
                 <input className="text_area" type="text"  /> <br />
                 <span className="text"> Pick To</span> <br />
                 <input className="text_area" type="text" /> <br/> <br/>
+                <input className="text_area" type="datetime-local"/> <br/><br/>
                 <button className="search_btn">Search</button>
             </div>
           </Col>
           <Col xs={10} md={8}>
-            <img src={googleMap} alt="googleMap" />
+            <img className="map_pic" src={googleMap} alt="googleMap" />
 
             {/* <Map google={this.props.google} zoom={14}>
                 <Marker onClick={this.onMarkerClick}

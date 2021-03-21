@@ -2,8 +2,7 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import "./menu.css";
 
-const Menu = (props) => {
-//   const {email} = props.allUser;
+const Menu = () => {
   return (
     <div>
       <Navbar>
@@ -13,16 +12,11 @@ const Menu = (props) => {
               className="logo"
               src="https://codesign.com.bd/conversations/content/images/2020/03/Sprint-logo-design-Codesign-agency.png"
               alt="logo"
-            />
+            /> <span className="logoA">pyra-transpotetion</span>
           </a>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-
-            {/* email:<small>{email}</small>  */}
-
-          </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>
 

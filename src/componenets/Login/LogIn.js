@@ -12,7 +12,6 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-
 const LogIn = () => {
   const [users, setUsers] = useState({
     isSignedIn:false,
@@ -21,9 +20,6 @@ const LogIn = () => {
     password:'',
     photo:''
   })
-
-
-
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -60,7 +56,7 @@ const LogIn = () => {
         var token = credential.accessToken;
         var user = result.user;
         setUser(user);
-        console.log("Git info", user);
+        
       })
       .catch((error) => {
         var errorMessage = error.message;
@@ -94,14 +90,11 @@ const LogIn = () => {
 
       firebase.auth().createUserWithEmailAndPassword(users.email, users.password)
   .then((userCredential) => {
-    // Signed in 
     var users = userCredential.users;
-    // ...
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-   console.log(errorCode , errorMessage)
   });
 
     }
@@ -110,8 +103,7 @@ const LogIn = () => {
 
   return (
     <div>
-      <Menu allUser={users}></Menu>
-      {/* <p>Email: {users.email}</p> */}
+      <Menu></Menu>
       <Container>
   <Row>
     <Col sm={8}>
@@ -170,8 +162,8 @@ const LogIn = () => {
                 </ul>
               </Col>
             </Form.Row>
-            <button type="submit" value="Submit" className="createAcountBtn">
-              Creat an account
+            <button type="submit" value="Submit" className="createAcountBtn" onClick={handleGoogleSignIn}>
+              Creat account
             </button>
           </Form>
           <p className="alraedy_text">
@@ -209,15 +201,6 @@ const LogIn = () => {
     </Col>
   </Row>
 </Container>
-
-
-
-
-
-
-
-
-
     </div>
   );
 };

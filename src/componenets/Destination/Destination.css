@@ -24,3 +24,17 @@
     width: 100%;
     color: lightgray;
 }
+
+@media screen and (max-width:720px){
+    .details{
+        height: 210px;
+        margin-left: 190px;
+        margin-top:0px;
+    }
+   .map_pic{
+       width: 400px;
+       margin-top: 50px;
+       margin-left: 150px;
+
+   }
+}
