@@ -66,16 +66,15 @@ const LogIn = () => {
   const handleBlur = (e) => {
    let isFormValid = true;
     if (e.target.name === "email") {
-      // isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
+      isFormValid = /\S+@\S+\.\S+/.test(e.target.value);
     }
 
     if (e.target.name === "password") {
-      // const passwordformat = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/.test(e.target.value)
-      // console.log(passwordformat);
+      const passwordformat = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/.test(e.target.value)
     }
     if (e.target.name === "FirstName") {
-      // const User_name = /^[a-zA-Z\-]+$/.test(e.target.value);
-      // console.log(User_name);
+      const User_name = /^[a-zA-Z\-]+$/.test(e.target.value);
+      
     }
 
     if(isFormValid){
